@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>My Projects</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #293d3b;
+        }
+
+        .header {
+            background-image: linear-gradient(rgb(232, 200, 200), rgb(235, 246, 161), rgb(227, 94, 112));
+            /* background-color: #333; */
+            color: black;
+            padding: 20px;
+            text-align: center;
+            font-family: cursive;
+            font-weight: bold;
+        }
+
+        .logo {
+            position: absolute;
+            top: 8px;
+            left: 16px;
+            height: 50px;
+            width: 200px;
+
+        }
+
+        .details {
+            position: absolute;
+            top: 8px;
+            right: 16px;
+            font-size: 15px;
+            color: rgb(4, 65, 108);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-align: right;
+        }
+
+        .header h3 {
+            color: rgb(200, 79, 9);
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 20px;
+            /* text-align: left; */
+            text-align: center;
+        }
+
+        .levelone {
+            text-align: center;
+            color: rgb(90, 214, 233);
+            font-size: 39px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .project {
+            margin-bottom: 30px;
+        }
+
+        .project img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .project .project-details {
+            background-color: #a3bcb9;
+            padding: 20px;
+            border-radius: 5px;
+        }
+
+        .project .project-title {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .project .project-description {
+            margin-bottom: 10px;
+        }
+
+        .project-link {
+            display: inline-block;
+            background-color: #167cf1;
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 25px;
+            border: 5px salmon;
+            cursor: pointer;
+        }
+
+        .project-link:hover {
+            /* background-color: rgb(20, 140, 72); */
+            background-image: linear-gradient(red, yellow, blue);
+            color: black;
+        }
+
+
+        @media screen and (max-width: 600px) {
+            .container {
+                padding: 10px;
+            }
+
+            .project {
+                margin-bottom: 20px;
+            }
+
+            .project .project-details {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <img class="logo"
+            src="https://cdn.razorpay.com/logos/Jz7ABSiJBIUWGY_large.png"
+            alt="logo">
+        <h1>My Projects</h1>
+        <h3>TechnoHacks Internship Program 2023 : Batch 5</h3>
+        <div class="details">
+            By Ankush Kumar <br>
+            Email : singhankush835@gmail.com <br>
+            Github: Ankush2093
+        </div>
+    </div>
+
+    <h1 class="levelone">All Task's <span class="arrow">&#8595</span> </h1>
+    <div class="container">
+        <div class="project">
+            <img src="web/landing page.png" alt="Task 1">
+            <div class="project-details">
+                <h2 class="project-title">Task 1</h2>
+                <p class="project-description">Responsive Landing Page </p>
+                <a href="landing.html" target="_blank" class="project-link">View Project</a>
+            </div>
+        </div>
+
+        <div class="project">
+            <img src="web/" alt="Task 2">
+            <div class="project-details">
+                <h2 class="project-title">Task 2 </h2>
+                <p class="project-description"> Responsive Calculator</p>
+                <a href="todo.html" target="_blank" class="project-link">View
+                    Project</a>
+            </div>
+        </div>
+
+        <div class="project">
+            <img src="web/" alt="Task 3">
+            <div class="project-details">
+                <h2 class="project-title">Task 3</h2>
+                <p class="project-description"> Responsive Contdown Timer</p>
+                <a href="Calculator.html" class="project-link">View Project</a>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>
