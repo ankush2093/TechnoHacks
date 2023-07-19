@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>countdown app</title>
+    
+</head>
+<style>
+    body {
+        margin: 0;
+        padding: 0%;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding-top: 3em;
+
+        width: 100%;
+        height: 100%;
+        color: black;
+        font-weight: bold;
+        animation: myanimation 10s infinite;
+
+
+    }
+
+    .headtype {
+        text-transform: uppercase;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+
+    #timer {
+        font-size: 4em;
+        margin-bottom: 20px;
+        font-weight: 400;
+    }
+
+    #hours {
+        color: blue;
+    }
+
+    #minutes {
+        color: brown;
+    }
+
+    #seconds {
+        color: rgb(10, 113, 19);
+    }
+
+
+    button {
+         margin-right: 10px;
+        height: 3em;
+        width: 5em; 
+        font-size: larger;
+        /* background-color: #f4770a; */
+        background: linear-gradient(110deg, #484ecd 10%, #db8823 100%); 
+        color: white;
+        cursor: pointer;
+        border: 3px solid greenyellow;
+        border-radius: 25px;
+    }
+
+button:hover{
+    background: #3e8e41;
+    box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}    
+  
+
+    /* background auto color changing */
+    @keyframes myanimation {
+        0% {
+            background-color: rgb(230, 124, 124);
+        }
+
+        25% {
+            background-color: rgb(244, 244, 219);
+        }
+
+        50% {
+            background-color: rgb(151, 189, 151);
+        }
+
+        75% {
+            background-color: rgb(241, 154, 154);
+        }
+
+        100% {
+            background-color: rgb(115, 106, 106);
+        }
+    }
+</style>
+
+<body>
+    <h1 class="headtype">countdown timer aap</h1>
+    <div id="timer">
+        <span id="hours">00 H</span>:
+        <span id="minutes">00 M</span>:
+        <span id="seconds">00 S</span>
+    </div>
+
+    <button id="startBtn">Start</button>
+    <button id="stopBtn">Stop</button>
+    <button id="resetBtn">Reset</button>
+
+
+
+
+</body>
+
+
+
+
+
+
+
+
+
+<script>
+    let timerInterval;
+    let hours = 0;
+    let minutes = 0;
+    let seconds = 0;
+    let isRunning = false;
+
+    const startBtn = document.getElementById("startBtn");
+    const stopBtn = document.getElementById("stopBtn");
+    const resetBtn = document.getElementById("resetBtn");
+
+    startBtn.addEventListener("click", startTimer);
+    stopBtn.addEventListener("click", stopTimer);
+    resetBtn.addEventListener("click", resetTimer);
+
+    function startTimer() {
+        if (!isRunning) {
+            isRunning = true;
+            timerInterval = setInterval(updateTimer, 1000);
+        }
+    }
+
+    function stopTimer() {
+        clearInterval(timerInterval);
+        isRunning = false;
+    }
+
+    function resetTimer() {
+        clearInterval(timerInterval);
+        hours = 0;
+        minutes = 0;
+        seconds = 0;
+        updateTimerDisplay();
+        isRunning = false;
+    }
+
+    function updateTimer() {
+        seconds++;
+
+        if (seconds === 60) {
+            seconds = 0;
+            minutes++;
+
+            if (minutes === 60) {
+                minutes = 0;
+                hours++;
+            }
+        }
+
+        updateTimerDisplay();
+    }
+
+    function updateTimerDisplay() {
+        const hoursDisplay = document.getElementById("hours");
+        const minutesDisplay = document.getElementById("minutes");
+        const secondsDisplay = document.getElementById("seconds");
+
+        hoursDisplay.textContent = padNumber(hours);
+        minutesDisplay.textContent = padNumber(minutes);
+        secondsDisplay.textContent = padNumber(seconds);
+    }
+
+    function padNumber(number) {
+        return number.toString().padStart(2, "0");
+    }
+
+</script>
+
+</html>
