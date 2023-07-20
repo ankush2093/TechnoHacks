@@ -10,7 +10,7 @@ TechnoHacks Internship Program 2023 : Batch 5 July Month
 
 <hr>
 <h3> This is Ui of this project<h3/>
-<p target="_blank">http://127.0.0.1:5500/index.html <p/>
+<p target="_blank">https://ankush2093.github.io/TechnoHacks/ <p/>
 
 <h3> This Ui of this Project <br> Task 1<h3/>
   <img width="1428" alt="Screenshot 2566-07-20 at 8 33 12 PM" src="https://github.com/ankush2093/TechnoHacks/assets/84925305/a2b3ae42-05b1-46f2-9de9-0f5e2a2d0c11">
